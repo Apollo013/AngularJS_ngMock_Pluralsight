@@ -17,5 +17,5 @@ Developed with Visual Studio Code
 |HTML|
 |CSS|
 |NodeJS|
-|NPM|
+|Npm|
 |Git|

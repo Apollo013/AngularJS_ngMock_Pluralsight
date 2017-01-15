@@ -1,0 +1,27 @@
+{
+  "name": "angularjs-ngmock-pluralsight",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "karma start .\\config\\karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Paul James Millar",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.1",
+    "angular-mocks": "^1.6.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2"
+  },
+  "description": ""
+}
