@@ -14,6 +14,7 @@ describe('omdb service', function(){
             }
         });
         */
+        
         angular.mock.module(function($provide){
             $provide.factory('omdbApi', function(){
                 return {
