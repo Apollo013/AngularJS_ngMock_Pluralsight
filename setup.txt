@@ -1,7 +1,7 @@
 npm init
 npm install karma --save-dev
 npm install -g karma-cli
-npm install karma-jasmine karma-firefox-launcher jasmine-core --save-dev
+npm install karma-jasmine karma-phantomjs jasmine-core --save-dev
 karma init
 npm install angular --save-dev
 npm install angular-mocks --save-dev
@@ -10,7 +10,7 @@ npm install angular-mocks --save-dev
 echo "# AngularJS_ngMock_Pluralsight" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
+git commit -m "Initial commit"
 git remote add origin https://github.com/Apollo013/AngularJS_ngMock_Pluralsight.git
 git push -u origin master
 
