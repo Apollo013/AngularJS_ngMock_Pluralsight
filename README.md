@@ -19,3 +19,4 @@ Developed with Visual Studio Code
 |NodeJS|
 |Npm|
 |Git|
+|Batch Files|
