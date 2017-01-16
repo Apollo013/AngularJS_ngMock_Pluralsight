@@ -1,6 +1,8 @@
 # AngularJS_ngMock_Pluralsight
 
-Lab work for course [Angularjs ngmock unit testing] (https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing/table-of-contents)
+---
+
+Lab work for course [Angularjs ngmock unit testing] (https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing/table-of-contents) on Pluralsight
 
 ---
 
