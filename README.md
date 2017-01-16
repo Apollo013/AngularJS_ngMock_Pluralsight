@@ -43,5 +43,5 @@ npm install angular-mocks --save-dev
 #### Committing changes with Git
 run commit "COMMIT MESSAGE" from cmd
 
-This will run the commit.bat file in root folder
+This will run the commit.bat file located in the root folder
 
