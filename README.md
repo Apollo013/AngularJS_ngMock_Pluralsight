@@ -25,11 +25,17 @@ Developed with Visual Studio Code
 
 #### Initialising Project
 npm init
+
 npm install karma --save-dev
+
 npm install -g karma-cli
+
 npm install karma-jasmine karma-phantomjs jasmine-core --save-dev
+
 karma init
+
 npm install angular --save-dev
+
 npm install angular-mocks --save-dev
 
 ---
