@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('omdb',['ngResource']);
+angular.module('omdb', ['ngResource']);

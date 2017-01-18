@@ -18,7 +18,9 @@ module.exports = function(config) {
       {pattern: 'node_modules/angular/angular.min.js', watched: false},
       {pattern: 'node_modules/angular-resource/angular-resource.js', watched: false},
       {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
-      'app/omdb/**/*.js',
+      'app/omdb/core/*.js',
+      'app/omdb/services/*.js',
+      'app/omdb/controllers/*.js',
       'tests/unit_tests/**/*-spec.js'
     ],
 
