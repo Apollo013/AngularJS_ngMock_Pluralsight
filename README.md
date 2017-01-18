@@ -1,4 +1,4 @@
-# AngularJS_ngMock_Pluralsight
+# [AngularJS_ngMock_Pluralsight](https://www.pluralsight.com/courses/angularjs-ngmock-unit-testing)
 
 ---
 
