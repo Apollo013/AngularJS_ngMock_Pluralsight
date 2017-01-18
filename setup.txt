@@ -14,3 +14,4 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/Apollo013/AngularJS_ngMock_Pluralsight.git
 git push -u origin master
 
+cd C:\Apps\Published\AngularJS_NgMock_Pluralsight

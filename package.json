@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "karma start .\\config\\karma.conf.js"
+    "test": "karma start .\\tests\\config\\karma.conf.js"
   },
   "repository": {
     "type": "git",
