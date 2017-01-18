@@ -4,7 +4,6 @@
 
 Lab work for course [Angularjs ngmock unit testing] (https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing/table-of-contents) on Pluralsight
 
----
 
 Developed with Visual Studio Code
 
