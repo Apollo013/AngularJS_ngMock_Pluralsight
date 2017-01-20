@@ -15,11 +15,13 @@ Developed with Visual Studio Code
 |----|
 |AngularJS|
 |Angular-mock|
+|Angular-route|
+|Angular-resource|
+|HTML|
+|CSS / Bootstrap|
 |Jasmine|
 |Karma|
 |PhantomJS|
-|HTML|
-|CSS|
 |NodeJS|
 |Npm|
 |Git|
@@ -57,6 +59,16 @@ karma init
 npm install angular --save-dev
 
 npm install angular-mocks --save-dev
+
+npm install angular-resource --save-dev
+
+npm install angular-route --save-dev
+
+npm install jquery --save-dev
+
+npm install bootstrap --save-dev
+
+npm install angular-ui-bootstrap --save-dev
 
 ---
 
