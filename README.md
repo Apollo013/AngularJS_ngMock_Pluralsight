@@ -27,6 +27,22 @@ Developed with Visual Studio Code
 
 ---
 
+###Modules
+|Description|
+|-----------|
+|01. Getting Started|
+|02. First Steps with ngMocks Core Functions|
+|03. Unit Testing HTTP Interactions with ngMock|
+|04. Unit Testing Controllers with ngMock|
+|05. Unit Testing with Timeouts and Intervals|
+|06. Unit Testing Directives with rootScope|
+|07. Unit Testing with Dates|
+|08. Unit Testing with Exceptions|
+|09. Unit Testing with Logging|
+|10. Testing with ngMockE2E BackEnd|
+
+---
+
 #### Initialising Project
 npm init
 
