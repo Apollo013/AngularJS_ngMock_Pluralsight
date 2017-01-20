@@ -17,11 +17,12 @@ module.exports = function(config) {
     files: [
       {pattern: 'node_modules/angular/angular.min.js', watched: false},
       {pattern: 'node_modules/angular-resource/angular-resource.js', watched: false},
-      {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
-      'app/omdb/core/*.js',
-      'app/omdb/services/*.js',
-      'app/omdb/controllers/*.js',
-      'tests/unit_tests/**/*-spec.js'
+      {pattern: 'node_modules/angular-route/angular-route.min.js', watched: false},
+      {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},      
+      'app/movieapp/core/*.js',
+      'app/movieapp/services/*.js',
+      'app/movieapp/controllers/*.js',
+      'tests/unit_tests/movieapp/**/*-spec.js'
     ],
 
 

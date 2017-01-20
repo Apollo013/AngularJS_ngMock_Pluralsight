@@ -37,7 +37,7 @@ describe('Results Controller Test Suite', function(){
     }));
 
     it('should load search results', function() {
-        // Mock 'search' method in data service to return what the data we want without worrying about inner functionality
+        // Mock 'search' method in data service to return the data we want (above) without worrying about inner functionality
         spyOn(omdbDataService, 'search').and.callFake(function(){
             var deferred = $q.defer();
             deferred.resolve(results);

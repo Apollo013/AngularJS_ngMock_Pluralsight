@@ -1,7 +1,7 @@
 {
   "name": "angularjs-ngmock-pluralsight",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "test": "tests"
   },
@@ -18,7 +18,11 @@
     "angular": "^1.6.1",
     "angular-mocks": "^1.6.1",
     "angular-resource": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-ui-bootstrap": "^2.4.0",
+    "bootstrap": "^3.3.7",
     "jasmine-core": "^2.5.2",
+    "jquery": "^3.1.1",
     "karma": "^1.4.0",
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.1.0",
