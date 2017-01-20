@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Movie App</title>
         <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/libs/css/site.css" type="text/css">
     </head>
     <body>
         <header>
@@ -18,8 +19,8 @@
                 <form class="form-inline" ng-submit="search()">
                     <label class="sr-only" for="title-search">Title</label>
                     <div class="input-group col-sm-12">
-                        <input type="text" class="form-control" id="title-search" placeholder="Search title" ng-model="query">
-                        <span class="input-group-btn">
+                        <input type="text" class="form-control" id="title-search" placeholder="Search title" ng-model="query" ng-keyup="keyup()" ng-keydown="keydown()">
+                        <span class="input-group-btn custom">
                             <button type="button" class="btn btn-primary" ng-click="search()">Go!</button>
                         </span>
                     </div>
@@ -36,19 +37,17 @@
                 Copyright © Paul James Millar 2017
             </div>             
         </footer>  
-              
-        <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
         <script src="/jquery/jquery.min.js"></script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
         <script src="/angular/angular.min.js"></script>
         <script src="/angularroute/angular-route.min.js"></script>
+        <script src="/angularresource/angular-resource.min.js"></script>
         <script src="core/movie-app.js"></script>
         <script src="services/omdb-service.js"></script>
+        <script src="services/popular-movies-service.js"></script>
         <script src='controllers/search-controller.js'></script>
         <script src='controllers/results-controller.js'></script>
+        <script src='controllers/home-controller.js'></script>
     </body>
 </html>

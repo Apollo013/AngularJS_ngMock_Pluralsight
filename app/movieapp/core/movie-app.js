@@ -1,11 +1,15 @@
 'use strict';
 
-angular.module('movieApp', ['ngRoute'])
+angular.module('movieApp', ['ngRoute', 'ngResource'])
 
 .config([ '$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider){
 
         $routeProvider
+        .when('/', {
+            templateUrl: '/templates/home-template.html',
+            controller: 'HomeController'
+        })
         .when('/results', {
             templateUrl: '/templates/results-template.html',
             controller: 'ResultsController'
