@@ -19,6 +19,7 @@ Developed with Visual Studio Code
 |Angular-resource|
 |HTML|
 |CSS / Bootstrap|
+|jQuery|
 |Jasmine|
 |Karma|
 |PhantomJS|
@@ -30,7 +31,7 @@ Developed with Visual Studio Code
 ---
 
 ###Modules
-|Description|
+|Module|
 |-----------|
 |01. Getting Started|
 |02. First Steps with ngMocks Core Functions|
