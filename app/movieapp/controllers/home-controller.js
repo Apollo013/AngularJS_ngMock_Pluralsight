@@ -4,6 +4,7 @@ angular.module('movieApp').controller('HomeController', [ '$scope', '$interval',
     function($scope, $interval, OMDBService, PopularMovieService){
 	    var results = ['tt0076759','tt0080684','tt0086190'];//[];
         var idx = 0;
+
         var findMovie = function(id){
             OMDBService.find(id)
             .then(function(response){
@@ -14,11 +15,6 @@ angular.module('movieApp').controller('HomeController', [ '$scope', '$interval',
                 console.log('Error finding: ' + id);
             });
         }
-
-        $scope.result = {
-	         "Title":"Star Wars: Episode IV - A New Hope",
-	         "imdbID":"tt0076759"
-	      };
           
        // PopularMovieService.get()
         //.then(function(data){

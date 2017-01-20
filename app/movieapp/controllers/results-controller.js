@@ -12,5 +12,19 @@ angular.module('movieApp').controller('ResultsController', [ '$scope', '$locatio
         .catch(function() {
             $scope.errorMessage = 'Something went wrong!'
         });
+
+        $scope.expand = function(idx, id){
+
+            if($scope.results[idx].open == true){
+                $scope.results[idx].open = false;
+            }
+            else {
+                OMDBService.find(id)
+                .then(function(data){
+                    $scope.results[idx].data = data.data;
+                    $scope.results[idx].open = true;
+                });
+            }                        
+        }
     }
 ]);

@@ -9,25 +9,16 @@
         <div class="panel panel-default" ng-repeat="result in results">
             <div class="panel-heading"  role="tab" id="heading{{$index}}">
                 <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href ng-click="expand($index, result.imdbID); " aria-expanded="false" aria-controls="collapse{{$index}}">
                         {{result.Title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': result.open, 'glyphicon-chevron-right': !result.open}"></i>
                     </a>
                 </h4>
             </div>
-            <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+            <div id="collapse{{$index}}" class="panel-collapse collapse" ng-class="{'collapse': !result.open}" role="tabpanel" aria-labelledby="heading{{$index}}">
                 <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <movie-result result="result.data"></movie-result>
                 </div>
             </div>
         </div>
-    </div>
-<!--
-    <accordion>
-        <accordion-group ng-repeat="result in results" is-open="result.open">
-        <accordion-heading>
-            {{result.Title}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': result.open, 'glyphicon-chevron-right': !result.open}"></i>
-        </accordion-heading>
-        </accordion-group>
-    </accordion>
--->    
+    </div> 
 </div>
