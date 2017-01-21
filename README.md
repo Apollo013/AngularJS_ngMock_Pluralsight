@@ -3,7 +3,7 @@
 
 Lab work for course [Angularjs ngmock unit testing] (https://app.pluralsight.com/library/courses/angularjs-ngmock-unit-testing/table-of-contents) on Pluralsight
 
-Developed with Visual Studio Code and access the omdb API for resources.
+Developed with Visual Studio Code and accesess the omdb API for resources.
 
 ![TDD](https://github.com/Apollo013/AngularJS_ngMock_Pluralsight/blob/master/Screenshot.png?raw=true "TDD Screen shot")
 
