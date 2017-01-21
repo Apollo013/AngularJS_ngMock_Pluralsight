@@ -25,9 +25,6 @@ angular.module('movieApp').filter('fromNow', function(){
         var yearsDiff = Math.floor(diffInMs / YEAR_IN_MS);
         var monthDiff = Math.floor(diffInMs / MONTH_IN_MS);
 
-        //console.log(releaseDate.getTime().toString() + ' - ' + currentDate.getTime().toString());
-        //console.log(dateDiff + ' - ' + tzDiff + ' - ' + diffInMs + ' - ' + YEAR_IN_MS + ' - ' + yearsDiff);
-
         if(yearsDiff > 0){
             return (yearsDiff === 1) ? yearsDiff + ' year ago' : yearsDiff + ' years ago';
         }

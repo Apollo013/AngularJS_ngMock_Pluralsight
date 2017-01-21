@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('movieApp', [ 'ngResource', 'ngRoute' ])
+angular.module('movieApp', [ 'ngResource', 'ngRoute'])
 
 .config([ '$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider){
@@ -22,4 +22,8 @@ angular.module('movieApp', [ 'ngResource', 'ngRoute' ])
             requireBase: false
         }).hashPrefix('!');
     }
-]);
+])
+
+.config(['$logProvider', function($logProvider){
+    $logProvider.debugEnabled(true);
+}]);

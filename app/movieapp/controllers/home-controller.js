@@ -12,8 +12,8 @@ angular.module('movieApp').controller('HomeController', [ '$scope', '$interval',
 	    var results = ['tt0076759','tt0080684','tt0086190'];
         var idx = 0;
 
-        var findMovie = function(id){
-            OMDBService.find(id)
+        var findMovie = function(omdbID){
+            OMDBService.find(omdbID)
             .then(function(response){
                 $scope.result = response.data;
             })
@@ -21,13 +21,12 @@ angular.module('movieApp').controller('HomeController', [ '$scope', '$interval',
                 console.log('Error finding: ' + id);
             });
         }
-          
 
         findMovie(results[0]);
         $interval(function(){
             ++idx;
             findMovie(results[idx % results.length]);
-        }, 5000);
+        }, 3000);
 
     }
 ]);

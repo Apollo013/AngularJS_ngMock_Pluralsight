@@ -23,17 +23,18 @@ describe('RESULTS CONTROLLER TEST SUITE: -> ', function(){
 	  ]
 	};
 
-    var $controller, $scope, $q, $rootScope, $location, OMDBService;
+    var $controller, $scope, $q, $rootScope, $location, log, OMDBService;
 
     beforeEach(angular.mock.module('movieApp'));
 
-    beforeEach(inject(function(_$controller_, _$q_, _$rootScope_, _OMDBService_, _$location_){
+    beforeEach(inject(function(_$controller_, _$q_, _$rootScope_, _$location_, _$log_, _OMDBService_){
         $controller = _$controller_;
         $scope = _$rootScope_.$new();
         $q = _$q_;
-        $rootScope = _$rootScope_;
-        OMDBService = _OMDBService_;
+        $log = _$log_;
+        $rootScope = _$rootScope_;        
         $location = _$location_;
+        OMDBService = _OMDBService_;
     }));
 
     it('should load search results', function() {
@@ -48,5 +49,8 @@ describe('RESULTS CONTROLLER TEST SUITE: -> ', function(){
         $controller('ResultsController', {$scope: $scope});
         $scope.$apply(); // resolves the promise
         expect(OMDBService.search).toHaveBeenCalledWith('star wars');
+
+        expect($log.debug.logs[0]).toEqual(['Controller Loaded with query: ', 'star wars']);
+        expect($log.debug.logs[1]).toEqual(['Data returned for query: ', 'star wars', results]);        
     });
 });

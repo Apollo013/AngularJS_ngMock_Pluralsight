@@ -13,18 +13,17 @@ describe('Home Controller Test Suite: ', function(){
 	         "imdbID":"tt0086190"
 	      }
 	  ];
-	var $scope, $interval, $q, OMDBService, PopularMovieService;
+	var $scope, $interval, $q, $log, $controller, $rootScope, OMDBService, PopularMovieService;
 
     beforeEach(module('movieApp'));
+
+	beforeEach(module(function($logProvider){
+		$logProvider.debugEnabled(true);
+	}));
 
     beforeEach(inject(function(_$q_, _PopularMovieService_){
         PopularMovieService = _PopularMovieService_;
         $q = _$q_;
-        spyOn(PopularMovieService,'get').and.callFake(function(){
-            var deferred = $q.defer();
-            deferred.resolve(['tt0076759','tt0080684','tt0086190'])
-            return deferred.promise;
-        });
     }));
 
 	beforeEach(inject(function(_OMDBService_) {
@@ -47,15 +46,29 @@ describe('Home Controller Test Suite: ', function(){
 	    });
 	}));
 
-    beforeEach(inject(function(_$controller_, _$interval_, _$rootScope_){
-        $scope = {};
+
+    beforeEach(inject(function(_$controller_, _$interval_, _$rootScope_, _$log_){
+		$controller =  _$controller_;
+		$rootScope = _$rootScope_;
+		$scope = $rootScope.$new();//{};
         $interval = _$interval_;
-        _$controller_('HomeController',{ $scope: $scope, $interval: $interval, OMDBService: OMDBService, PopularMovieService: PopularMovieService });
-        _$rootScope_.$apply();
+		$log = _$log_;		
     }));
 
+
+    it('log checking', function(){
+		console.log(angular.mock.dump($log.info.logs));
+		console.log(angular.mock.dump($log.error.logs));
+		console.log(angular.mock.dump($log.warn.logs));
+		//console.log(angular.mock.dump($scope));
+
+        spyOn(PopularMovieService,'query').and.callFake(function(cb){
+            cb(['tt0076759','tt0080684','tt0086190']);
+        });
+
+        $controller('HomeController',{ $scope: $scope, $interval: $interval, OMDBService: OMDBService, PopularMovieService: PopularMovieService });
+        $rootScope.$apply();
 /*
-    it('should rotate movies every 5 seconds', function(){
 		expect($scope.result.Title).toBe(results[0].Title);
         $interval.flush(5000);
         expect($scope.result.Title).toBe(results[1].Title);
@@ -63,6 +76,8 @@ describe('Home Controller Test Suite: ', function(){
         expect($scope.result.Title).toBe(results[2].Title);
         $interval.flush(5000);
         expect($scope.result.Title).toBe(results[0].Title);
+		$interval.flush(5000);
+*/		
     });
-*/
+
 });

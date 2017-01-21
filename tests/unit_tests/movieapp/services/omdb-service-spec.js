@@ -26,19 +26,20 @@ describe('OMDB Data Service', function(){
         Tests
     ----------------------------------------------------------------------------------------*/  
     it('should return search movie data', function(){
+        var res;
         // Arrange
         $httpBackend.when('GET', url).respond(200, searchData);
 
         // Act
         OMDBService.search('star wars').then(
             function(data)  {
-                response = data.data;
+                res = data.data;
             }
         );
         $httpBackend.flush();
 
         // Assert
-        expect(response).toEqual(searchData);
+        expect(res).toEqual(searchData);
     });
 
     it('should return movie data by id', function(){
@@ -62,7 +63,7 @@ describe('OMDB Data Service', function(){
         $httpBackend.when('GET', url).respond(500);
 
         // Act
-        OMDBService.find('tt007679').then(
+        OMDBService.find('tt0076759').then(
             function(data)  {
                 response = data;
             }

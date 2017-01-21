@@ -12,15 +12,13 @@ angular.module('movieApp').factory('OMDBService', [ '$http',
             Service functionality
         ----------------------------------------------------------------------------------------*/
         function httpPromise(url){
-            return $http.get(url).then(
+            return $http.get(url)
+            .then(
                 function(response){
-                    //console.log('\ngood: ' + JSON.stringify(response));
                     return response
-                },
-                function(errorResponse){
-                    //console.log('\nbad: ' + JSON.stringify(errorResponse));
-                    return errorResponse;
-                    //throw 'Something went wrong!'
+                }, 
+                function(error){
+                    return error;
                 }
             );            
         }
