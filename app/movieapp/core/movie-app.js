@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('movieApp', ['ngRoute', 'ngResource'])
+angular.module('movieApp', [ 'ngResource', 'ngRoute' ])
 
 .config([ '$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider){

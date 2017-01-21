@@ -1,4 +1,4 @@
-describe('Results Controller Test Suite', function(){
+describe('RESULTS CONTROLLER TEST SUITE: -> ', function(){
 
     var results = {
 	   "Search":[
@@ -29,7 +29,7 @@ describe('Results Controller Test Suite', function(){
 
     beforeEach(inject(function(_$controller_, _$q_, _$rootScope_, _OMDBService_, _$location_){
         $controller = _$controller_;
-        $scope = {};
+        $scope = _$rootScope_.$new();
         $q = _$q_;
         $rootScope = _$rootScope_;
         OMDBService = _OMDBService_;
@@ -46,12 +46,7 @@ describe('Results Controller Test Suite', function(){
 
         $location.search('q', 'star wars'); // this will simulate a change in route with a parameter of q -> 'star wars'
         $controller('ResultsController', {$scope: $scope});
-        $rootScope.$apply(); // resolves the promise
-
-        //expect($scope.results[0].Title).toBe(results.Search[0].Title);
-		//expect($scope.results[1].Title).toBe(results.Search[1].Title);
-		//expect($scope.results[2].Title).toBe(results.Search[2].Title);
-
+        $scope.$apply(); // resolves the promise
         expect(OMDBService.search).toHaveBeenCalledWith('star wars');
     });
 });

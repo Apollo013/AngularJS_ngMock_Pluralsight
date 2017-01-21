@@ -23,6 +23,7 @@ module.exports = function(config) {
       'app/movieapp/services/*.js',
       'app/movieapp/controllers/*.js',
       'app/movieapp/directives/*.js',
+      'app/movieapp/filters/*.js',
       'tests/unit_tests/movieapp/**/*-spec.js'
     ],
 

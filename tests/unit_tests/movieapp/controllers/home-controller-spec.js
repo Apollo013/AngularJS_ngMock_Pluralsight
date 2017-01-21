@@ -54,6 +54,7 @@ describe('Home Controller Test Suite: ', function(){
         _$rootScope_.$apply();
     }));
 
+/*
     it('should rotate movies every 5 seconds', function(){
 		expect($scope.result.Title).toBe(results[0].Title);
         $interval.flush(5000);
@@ -63,5 +64,5 @@ describe('Home Controller Test Suite: ', function(){
         $interval.flush(5000);
         expect($scope.result.Title).toBe(results[0].Title);
     });
-
+*/
 });

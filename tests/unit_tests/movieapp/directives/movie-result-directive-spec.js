@@ -1,4 +1,4 @@
-describe('Movie Result Directive Test Suite: ', function() {
+describe('MOVIE RESULT DIRECTIVE TEST SUITE: ', function() {
 	
     var result = {
       Poster: 'http://localhost/image.jpg',
@@ -19,7 +19,7 @@ describe('Movie Result Directive Test Suite: ', function() {
             '<p class="ng-binding">A young boy from Tatooine sets out on an adventure with an old Jedi named Obi-Wan Kenobi as his mentor to save Princess Leia from the ruthless Darth Vader and Destroy the Death Star built by the Empire which has the power to destroy the entire galaxy.</p>',
             '<p class="ng-binding"><strong>Director:</strong> George Lucas</p>',
             '<p class="ng-binding"><strong>Actors:</strong> Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing</p>',
-            '<p class="ng-binding"><strong>Released:</strong> 25 May 1977</p>',
+            '<p class="ng-binding"><strong>Released:</strong> 25 May 1977 (39 years ago)</p>',
             '<p class="ng-binding"><strong>Genre:</strong> Action, Adventure, Fantasy</p>',
 		  '</div>'
 	  ].join('')
@@ -34,7 +34,7 @@ describe('Movie Result Directive Test Suite: ', function() {
         $rootScope = _$rootScope_;
     }));
 
-    it('should html to be the same', function(){
+    it('should expect html to be the same', function(){
         var $scope = $rootScope.$new();
         $scope.result = result;
         var element;

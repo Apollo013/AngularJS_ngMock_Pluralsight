@@ -18,7 +18,7 @@ angular.module('movieApp').directive('movieResult',[
                         '<p>{{result.Plot}}</p>',
                         '<p><strong>Director:</strong> {{result.Director}}</p>',
                         '<p><strong>Actors:</strong> {{result.Actors}}</p>',
-                        '<p><strong>Released:</strong> {{result.Released}}</p>',
+                        '<p><strong>Released:</strong> {{result.Released}} ({{result.Released | fromNow}})</p>',
                         '<p><strong>Genre:</strong> {{result.Genre}}</p>',
                     '</div>',
                 '</div>'

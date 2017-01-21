@@ -1,16 +1,20 @@
 'use strict';
 
-angular.module('movieApp').controller('ResultsController', [ '$scope', '$location', 'OMDBService',
-    function($scope, $location, OMDBService){
+angular.module('movieApp').controller('ResultsController', [ '$scope', '$location', '$exceptionHandler', 'OMDBService',
+    function($scope, $location, $exceptionHandler, OMDBService){
 		var query = $location.search().q;
 
 		OMDBService.search(query)
         .then(function(data) {
-            //console.log(data);
-            $scope.results = data.data.Search;
+            if(data.status == 200){
+                $scope.results = data.data.Search;
+            }
+            else{
+                console.log('Something went wrong: ' + JSON.stringify(data));
+            };            
         })
-        .catch(function() {
-            $scope.errorMessage = 'Something went wrong!'
+        .catch(function(e) {
+            $exceptionHandler(e);
         });
 
         $scope.expand = function(idx, id){
